@@ -1,1 +1,21 @@
+# Getting and Cleaning Data Project
+The data used in this project was collected on 30 individuals using a gyroscope and accelerator on a smart phone. The data was recorded as the subjects performed six activities, and every few seconds recorded information information on numerous features. For this project, we  only use the features that include information about the means and standard deviations. The data was then randomly split into training and test datasets.
+A full description of the data can be found here:
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+The source data for this project can be found here:
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
+# Variables
+UCIzip: Names the destination file when the data is being downloaded locally.
+activityLabels: Reads the file activity.txt as a table, which includes names of the six activities performed, as well as numerical representations of the activities.
+features: Reads the data file features.txt as a table, which includes names of the features recorded by the gyroscope and accelerometer
+meanstd: Creates a subset of the list of features that were recorded, only including data that contains information about the means and standard deviations.
+trainData: Reads the training dataset from the file X_train.txt, and subsets the data to only include feature names included in the features variable. 
+trainLabels: Reads the file Y_train.txt into a table, including numerical values that correspond to each activity performed in each record/row.
+trainSubjects: Reads the file subject_train.txt into a table, including numerical values that represent the participant number for each record/row.
+testData: Reads the training dataset from the file X_test.txt, and subsets the data to only include feature names included in the features variable. 
+testLabels: Reads the file Y_test.txt into a table, including numerical values that correspond to each activity performed in each record/row.
+testSubjects: Reads the file subject_test.txt into a table, including numerical values that represent the participant number for each record/row.
+testtrain: Used rbind() to join the testData and trainData dataframes
+meanstdNames: Cleans up the names of the features that were recorded so they are more readable
+tidy: Groups the testtrain dataset by Subject and Activity, finding the mean of each of the other feature variables that were recorded in each record.
