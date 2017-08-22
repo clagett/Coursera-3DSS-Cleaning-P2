@@ -1,11 +1,14 @@
-# Getting and Cleaning Data Project
+Getting and Cleaning Data Project
+
 The data used in this project was collected on 30 individuals using a gyroscope and accelerator on a smart phone. The data was recorded as the subjects performed six activities, and every few seconds recorded information information on numerous features. For this project, we  only use the features that include information about the means and standard deviations. The data was then randomly split into training and test datasets.
 A full description of the data can be found here:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 The source data for this project can be found here:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-# Variables
+
+Variables
+
 UCIzip: Names the destination file when the data is being downloaded locally.
 activityLabels: Reads the file activity.txt as a table, which includes names of the six activities performed, as well as numerical representations of the activities.
 features: Reads the data file features.txt as a table, which includes names of the features recorded by the gyroscope and accelerometer
